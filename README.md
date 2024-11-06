@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+**Weather Now App**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Description**
+The **Weather Now** application allows users to check the current weather conditions for any city. The app displays information such as temperature, wind speed, humidity, and a brief description of the weather (e.g., sunny, rainy, cloudy). Users can search for multiple cities and view real-time weather updates using the **Open-Meteo API**.
 
-Currently, two official plugins are available:
+**Features**
+- **City Search**: Input a city name to view current weather data.
+- **Weather Display**: Shows temperature, wind speed, and humidity.
+- **Weather Description**: Provides a simple description (e.g., sunny, cloudy).
+- **Responsive Design**: Works well on both desktop and mobile devices.
+- **Error Handling**: Gracefully handles errors like no city found or API issues.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Tech Stack**
+- **Frontend**: React.js
+- **API**: Open-Meteo API
+- **Styling**: Basic CSS (or Tailwind CSS if preferred)
+- **State Management**: React State
+- **HTTP Requests**: Axios
 
-## Expanding the ESLint configuration
+**Setup Instructions**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Prerequisites**
+Ensure you have the following installed:
+- **Node.js** (for local development, if needed)
+- **npm** or **yarn** (for dependency management)
 
-- Configure the top-level `parserOptions` property like this:
+**Installing Dependencies**
+1. Clone the repository:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```bash
+   git clone https://github.com/username/weather-now-app.git
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Navigate to the project folder:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   cd weather-now-app
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Install dependencies using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+**Running the Application Locally**
+1. Start the application:
+
+   ```bash
+   npm start
+   ```
+
+2. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+**Usage**
+
+1. Open the application in your browser.
+2. Enter the name of a city in the input field.
+3. Click the **Search** button to see the current weather information.
+4. The weather data includes temperature, wind speed, humidity, and a brief description of the weather.
+
+**Deployed Application**
+
+You can view the live version of the app here:
+
+[Weather Now App - StackBlitz](https://stackblitz.com/edit/weather-now-app)
+
+
+**Contributing**
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to your branch (`git push origin feature/your-feature-name`).
+5. Create a pull request.
+
+**License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Acknowledgements**
+- The **Open-Meteo API** for providing weather data.
+- **StackBlitz** for online development and hosting.
